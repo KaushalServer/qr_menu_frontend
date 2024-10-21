@@ -1,4 +1,4 @@
-import './Menuitem.css';
+import './MenuItem.css';
 import burgerImage from '../../assets/burger.jpeg';
 
 const Menuitem = ({ name, price_full, price_half ,image}) => {
