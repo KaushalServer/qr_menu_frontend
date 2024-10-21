@@ -1,0 +1,39 @@
+/* Container Styles */
+.container {
+    max-width: 1200px; /* Limit the width for larger screens */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add padding */
+    background-color: #fff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    /* overflow-y: hidden; */
+}
+
+/* Menu Title Styles */
+.menu {
+    text-align: center;
+    padding: 15px;
+    margin: 20px 0;
+    font-size: 2rem; /* Larger font size */
+    color: #e80d94; /* Color matching the border */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid rgba(232, 13, 148, 0.5); /* Underline effect */
+}
+
+/* Menu Items Styles */
+.menu-items {
+    display: flex; /* Display menu items as a flexbox */
+    flex-wrap: wrap; /* Wrap menu items to the next line */
+    justify-content: center; /* Center menu items horizontally */
+    height: 80vh;
+    overflow-y: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu {
+        font-size: 1.5rem; /* Decrease font size for smaller screens */
+    }
+}

@@ -1,0 +1,70 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%; /* Make it responsive */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.add-food-form .form-group {
+    margin-bottom: 1.5rem; /* Increase space between groups */
+}
+
+.add-food-form .form-group input {
+    width: 100%;
+    padding: 0.75rem; /* Increase padding for better touch targets */
+    font-size: 1rem;
+    border: 1px solid #ccc; /* Add border for input fields */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-around; /* Space buttons evenly */
+}
+
+.submit-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 0.75rem 1.5rem; /* Increase button padding */
+    border : none;
+    cursor: pointer;
+    border-radius: 4px; /* Rounded corners */
+}
+
+.submit-btn:hover {
+    background-color: #2f6a40; /* Darken the button on hover */
+}
+
+.cancel-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.cancel-btn:hover {
+    background-color: #c82333; /* Darken the button on hover */
+}
+
+.error-message {
+    color: #dc3545; /* Display error messages in red */
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
