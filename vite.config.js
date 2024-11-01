@@ -8,6 +8,8 @@ export default defineConfig({
     proxy:{
       "/api":{
         target: "https://qrmenubackend.onrender.com",
+        changeOrigin: true,
+        secure: false,
       },
     },
   },
