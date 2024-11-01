@@ -9,7 +9,7 @@ export default defineConfig({
       "/api":{
         target: "https://qrmenubackend.onrender.com",
         changeOrigin: true,
-        secure: false,
+        secure: true,
       },
     },
   },
