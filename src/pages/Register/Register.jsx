@@ -22,7 +22,7 @@ const Register = () => {
 
         try {
             // Fetch request to the signup endpoint
-            const response = await fetch('/api/auth/signup', {
+            const response = await fetch('https://qrmenubackend.onrender.com/api/auth/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

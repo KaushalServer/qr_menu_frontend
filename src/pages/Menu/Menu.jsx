@@ -39,7 +39,7 @@ const Menu = () => {
 
         try {
             // Fetch request to the signup endpoint
-            const response = await fetch('/api/menu/add-item', {
+            const response = await fetch('https://qrmenubackend.onrender.com/api/menu/add-item', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -72,7 +72,7 @@ const Menu = () => {
     const fetchData = async () => {
 
         try {
-            const response = await fetch('/api/menu/get-menu', {
+            const response = await fetch('https://qrmenubackend.onrender.com/api/menu/get-menu', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -81,12 +81,12 @@ const Menu = () => {
                 mode: 'cors',
             });
 
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-
             const data = await response.json();
-            console.log(data);
+
+            if (data.error) {
+                toast.error(data.error);
+                return;
+            }
 
             setMenuData(data.data);
             // console.log("Hai kuch:- ",menuData);

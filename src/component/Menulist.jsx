@@ -11,7 +11,7 @@ const Menulist = ({ restaurantSlug }) => {
         const fetchData = async () => {
 
             try {
-                const response = await fetch('/api/menu/get-menu', {
+                const response = await fetch('https://qrmenubackend.onrender.com/api/menu/get-menu', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -41,9 +41,9 @@ const Menulist = ({ restaurantSlug }) => {
     // Api call with restaurent Name in request body
 
     return (
-        <div className="container">
-            <h2 className="menu">{restaurantSlug} Menu</h2>
-            <div className="menu-items">
+        <div className="menu-container">
+            <h2 className="menu-heading">{restaurantSlug} Menu</h2>
+            <div className="menu-items-wrapper">
                 {menus.map((item) => (
                     <Menuitem
                         key={item._id}

@@ -24,7 +24,7 @@ const Login = () => {
 
         try {
             // Fetch request to the signup endpoint
-            const response = await fetch('/api/auth/signin', {
+            const response = await fetch('https://qrmenubackend.onrender.com/api/auth/signin', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
