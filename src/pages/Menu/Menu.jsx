@@ -5,7 +5,6 @@ import { toast } from 'react-hot-toast';
 import Menuitem from '../../component/MenuItem/Menuitem.jsx';
 import { useSelector } from 'react-redux';
 import { selectLoggedInUser } from '../../store/user/userSlice.js';
-// import { selectLoggedInUser } from './store/user/userSlice.js';
 
 const Menu = () => {
 
@@ -19,6 +18,7 @@ const Menu = () => {
     const [menuUpdated, setMenuUpdated] = useState(false);
 
     const currentUser = useSelector(selectLoggedInUser);
+    const token = currentUser.user.access_token;
 
     const handleToggleHalfPrice = () => {
         setShowHalfPriceInput(!showHalfPriceInput);
@@ -43,6 +43,7 @@ const Menu = () => {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
                 },
                 body: JSON.stringify({ item_name, item_price_full, item_price_half, item_image, restaurant_id }),
                 credentials: "include",
@@ -76,8 +77,9 @@ const Menu = () => {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
                 },
-                credentials: 'include', // Include cookies in the request
+                // credentials: 'include', // Include cookies in the request
                 mode: 'cors',
             });
 
